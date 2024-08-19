@@ -1,0 +1,68 @@
+<!-- References:
+https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function 
+https://www.w3schools.com/cssref/pr_class_position.php
+https://www.w3schools.com/html/html_links.asp
+https://www.w3schools.com/tags/tag_div.asp
+https://www.w3schools.com/tags/tag_span.asp
+https://www.w3schools.com/tags/tag_img.asp
+-->
+
+<!DOCTYPE html>
+<head>
+    <title>CSCE749 Homework 1, Question 1</title>
+    <style>
+        .container {
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .pic-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        img {
+            width: 196px;
+            height: auto;
+            cursor: pointer;
+        }
+
+        .link {
+            position: fixed;
+            white-space: nowrap;
+            background-color: rgb(90, 90, 90);
+            padding: 2px;
+            border: 1px solid rgb(90, 90, 90);
+            opacity: 0;
+            transition: opacity 1.0s ease-in-out;
+            color: #c6c6c6;
+            font-family: 'Arial', sans-serif;
+            font-size: 14.5px;
+            border-radius: 2px;
+            z-index: 1;
+        }
+
+        .pic-container:hover .link {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="container">
+        <h1>Welcome!</h1>
+        <p>If you love dogs and HATE cats, click on the dog picture to see more pictures of cute dogs:</p>
+
+        <div class="pic-container">
+            <a href="https://cat-bounce.com">
+                <img src="dog.png" alt="cute dog">
+            </a>
+            <div class="link">
+                <span>https://cutedog-pictures.com</span>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
